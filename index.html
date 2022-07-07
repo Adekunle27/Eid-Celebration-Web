@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Eid To You And Your Family</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Eid-Ul-Adha</a>
+      <div class="toggle"></div>
+      <ul class="nav__menu">
+        <li><a href="index.html " class="active">Home</a></li>
+        <li><a href="courses.html">Gift</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="./images/stars.png" id="stars" alt="" />
+      <img src="./images/stars2.png" alt="" id="stars2" />
+      <img src="./images/moon.png" id="moon" alt="" />
+      <h2 id="text">Eid Mubarak</h2>
+      <img src="./images/rock.png" id="rock" alt="" />
+      <img src="./images/masjid.png" id="masjid" alt="" />
+      <img src="./images/bottom.png" id="bottom" alt="" />
+      <img src="./images/lamp.png" id="lamp" alt="" />
+    </section>
+
+    <script>
+      let stars = document.getElementById("stars");
+      let stars2 = document.getElementById("stars2");
+      let moon = document.getElementById("moon");
+      let rock = document.getElementById("rock");
+      let masjid = document.getElementById("masjid");
+      let text = document.getElementById("text");
+      let header = document.getElementById("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.bottom = value * 0.05 + "%";
+        stars2.style.bottom = value * 0.025 + "%";
+        moon.style.bottom = value * -0.5 + "px";
+        rock.style.bottom = value * -0.75 + "px";
+        masjid.style.bottom = value * -0.15 + "px";
+
+        text.style.right = -100 + value * 0.5 + "%";
+        text.style.top = 50 + value * 0.1 + "%";
+
+        header.style.top = value * 0.5 + "px";
+      });
+
+      const toggleMenu = document.querySelector(".toggle");
+      const navigation = document.querySelector(".nav__menu");
+
+      toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
